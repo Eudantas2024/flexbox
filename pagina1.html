@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste de divs</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0px auto;
+            padding: 20px;
+            background-color: #889ba3;
+        }
+
+        .caixa1 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .caixa1>* {
+            flex: 1 1 250px;
+            background-color: #dce5f5;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 0;
+        }
+
+        .caixa1 h2 {
+            color: rgb(202, 80, 24);
+            font-size: 0.9rem;
+        }
+
+        .caixa1 h3 {
+            color: rgb(50, 38, 218);
+            font-size: 0.9rem;
+        }
+
+        .caixa1 p {
+            color: rgb(39, 125, 19);
+            font-size: 0.9rem;
+        }
+
+        /* A PARTIR DAQUI CONFIG DA CAIXA 2 */
+
+        .caixa2 {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .caixa2 .coluna1 {
+            flex: 1 1 100%;
+            background-color: #dce5f5;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .caixa2 .coluna2,
+        .caixa2 .coluna3 {
+            flex: 1 1 100%;
+            background-color: #dce5f5;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .caixa2 h2 {
+            color: rgb(202, 80, 24);
+            font-size: 0.9rem;
+        }
+
+        .caixa2 h3 {
+            color: rgb(50, 38, 218);
+            font-size: 0.9rem;
+        }
+
+        .caixa2 p {
+            color: rgb(39, 125, 19);
+            font-size: 0.9rem;
+        }
+
+        /* ✅ MEDIA QUERY - aplica 70% para coluna1 acima de 800px */
+        @media (min-width: 800px) {
+            .caixa2 .coluna1 {
+                flex: 0 0 70%;
+            }
+
+            .caixa2 .coluna2,
+            .caixa2 .coluna3 {
+                flex: 1 1 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="index.html">voltar para index</a>
+        <div class="caixa2">
+            <div class="coluna2">
+                <h2>este é um titulo generico </h2>
+                <p>Conteúdo adicional Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ex
+                    cupiditate ratione ipsum obcaecati sunt veritatis similique id doloremque, vel, incidunt numquam.
+                    Voluptates ut quam iste distinctio ex sequi eos!</p>
+            </div>
+            <div class="coluna1">
+                <h2>Título principal</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum rerum quo dolorem. Totam beatae
+                    quibusdam a magni excepturi, molestias dolore cum culpa cupiditate error alias commodi quis ullam
+                    similique voluptatem!</p>
+            </div>
+        </div>
+
+        <div class="caixa2">
+            <div class="coluna1">
+                <h2>Título principal</h2>
+                <p>Lorem ipsum, dolor sit Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae error a provident omnis, ab possimus eveniet sit exercitationem amet libero voluptate modi ipsam necessitatibus veritatis, iure asperiores laboriosam odio unde. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione ducimus atque enim dolorum beatae expedita tempore nulla totam nostrum deserunt sed doloribus voluptate, voluptatum sit sequi quis, incidunt eveniet repellendus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique veniam earum porro perferendis libero rerum, accusamus nulla asperiores eaque repellendus, placeat voluptas necessitatibus incidunt reiciendis maiores dicta tenetur magni Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe repellat dolorem inventore alias fugit optio deleniti minus, cumque quae iure corrupti aut sapiente vitae quasi aspernatur rem veritatis commodi. Numquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quis incidunt soluta, blanditiis maxime perspiciatis minima quae deleniti excepturi nemo vero ut id rem aperiam obcaecati modi autem quo reiciendis. amet consectetur adipisicing elit. Dolorum rerum quo dolorem. Totam beatae
+                    quibusdam a magni excepturi, molestias dolore cum culpa cupiditate error alias commodi quis ullam
+                    similique voluptatem!</p>
+            </div>
+            <div class="coluna2">
+                <h3>Subtítulo Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi facilis non eligendi
+                    laborum saepe, ipsam vel accusantium dignissimos aperiam velit quia animi eos debitis magnam aliquid
+                    aspernatur a itaque atque.</h3>
+            </div>
+            <div class="coluna3">
+                <p>Conteúdo adicional Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ex
+                    cupiditate ratione ipsum obcaecati sunt veritatis similique id doloremque, vel, incidunt numquam.
+                    Voluptates ut quam iste distinctio ex sequi eos!</p>
+            </div>
+        </div>
+
+        <div class="caixa1">
+            <div>
+                <h3>Subtítulo Lorem ipsum dolor</h3>
+                <p>mslslmslm Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga temporibus, animi excepturi
+                    quis accusantium inventore a mollitia praesentium! Eaque alias libero assumenda perspiciatis odit,
+                    doloremque similique quaerat minima placeat inventore.</p>
+            </div>
+            <h3>ldkldkldld,l,</h3>
+        </div>
+
+        <div class="caixa1">
+            <h2>Lorem ipsum doloribus, quasi aectetur ex perspiciatis Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit. In doloribus ducimus delectus, quasi eveniet fuga voluptatum repudiandae debitis
+                possimus et commodi facilis illum, esse nam, quidem pariatur eius a soluta! Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Dolores perspiciatis iste nihil cupiditate. Minima quod odit ab dicta
+                suscipit earum sint illum et vitae ea qui nesciunt nam, fuga reprehenderit? Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Molestiae alias rerum atque soluta, velit eum consequatur porro quod
+                dolore nobis ratione nostrum rem odio eaque sequi accusamus ipsum exercitationem voluptas.</h2>
+            <h3>Subtítulo Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ut reiciendis odio
+                asperiores corporis. Fugiat asperiores incidunt nam vitae aperiam, facere cumque ex nostrum inventore
+                unde, quod neque, quasi non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dicta,
+                mollitia consequuntur inventore perferendis praesentium voluptatum consequatur ad, quae, corrupti
+                incidunt id facilis sit ullam provident. In labore cupiditate eius!com outra Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Nemo deserunt vitae velit excepturi nulla esse dolores magni, vero ullam
+                facilis earum error labore aut quis quibusdam, saepe adipisci amet iste. loren loren
+                cor, horizontal</h3>
+            <p>Lorem ipsum dolor sit amet consectetur a Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore dolores error similique vitae, ex, in accusantium harum neque nihil accusamus distinctio cum
+                reicienddipisicing elit. Impedit, adipisci provident molestiae asperiores
+                veniam assumenda? Atque expedita modi sunt dolorum consectetur fugiat nisi consequuntur? Repellendus et
+                aspernatur impedit reprehenderit maxime?dipisicing elit. Aliquid corrupti aspernatur excepturi ipsum
+                similique pariatur fugit doloribus, quam culpa sit sequi vel provident iure quo vitae aut qui officia
+                obcaecati!</p>
+        </div>
+
+        <div class="caixa1">
+            <h2>Lorem ipsum doloribus, quasi aectetur ex perspiciatis Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit. In doloribus ducimus delectus, quasi eveniet fuga voluptatum repudiandae debitis
+                possimus et commodi facilis illum, esse nam, quidem pariatur eius a soluta! Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Dolores perspiciatis iste nihil cupiditate. Minima quod odit ab dicta
+                suscipit earum sint illum et vitae ea qui nesciunt nam, fuga reprehenderit? Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Molestiae alias rerum atque soluta, velit eum consequatur porro quod
+                dolore nobis ratione nostrum rem odio eaque sequi accusamus ipsum exercitationem voluptas.</h2>
+
+            <p>Lorem ipsum dolor sit amet consectetur a Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore dolores error similique vitae, ex, in accusantium harum neque nihil accusamus distinctio cum
+                reiciendis provident, voluptas qui eum suscipit. Fuga, necessitatibus? Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Recusandae nobis similique esse placeat! Dicta vitae, itaque vel dolorem
+                adipisci, rerum sapiente labore sint omnis, amet perferendis est repudiandae architecto modi. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Impedit, adipisci provident molestiae asperiores
+                veniam assumenda? Atque expedita modi sunt dolorum consectetur fugiat nisi consequuntur? Repellendus et
+                aspernatur impedit reprehenderit maxime?dipisicing elit. Aliquid corrupti aspernatur excepturi ipsum
+                similique pariatur fugit doloribus, quam culpa sit sequi vel provident iure quo vitae aut qui officia
+                obcaecati!</p>
+        </div>
+    </div>
+</body>
+
+</html>
