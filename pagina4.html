@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semantic Layout</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #889ba3;
+    }
+
+    .card-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card-section>* {
+      flex: 1 1 250px;
+      background-color: #dce5f5;
+      padding: 20px;
+      border-radius: 6px;
+      margin: 0;
+    }
+
+    .card-section h2 {
+      color: rgb(202, 80, 24);
+      font-size: 0.9rem;
+    }
+
+    .card-section h3 {
+      color: rgb(50, 38, 218);
+      font-size: 0.9rem;
+    }
+
+    .card-section p {
+      color: rgb(39, 125, 19);
+      font-size: 0.9rem;
+    }
+
+    .content-grid {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .content-grid .main-content,
+    .content-grid .sidebar,
+    .content-grid .extra-content {
+      flex: 1 1 100%;
+      background-color: #dce5f5;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    .content-grid h2 {
+      color: rgb(202, 80, 24);
+      font-size: 0.9rem;
+    }
+
+    .content-grid h3 {
+      color: rgb(50, 38, 218);
+      font-size: 0.9rem;
+    }
+
+    .content-grid p {
+      color: rgb(39, 125, 19);
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 800px) {
+      .content-grid .main-content {
+        flex: 0 0 70%;
+      }
+
+      .content-grid .sidebar,
+      .content-grid .extra-content {
+        flex: 1 1 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <a href="index.html">Back to index</a>
+
+    <div class="content-grid">
+      <div class="sidebar">
+        <h2>Generic Title</h2>
+        <p>Additional content lorem ipsum dolor sit amet...</p>
+      </div>
+      <div class="main-content">
+        <h2>Main Title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      </div>
+    </div>
+
+    <div class="content-grid">
+      <div class="main-content">
+        <h2>Main Title</h2>
+        <p>Long content lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+      </div>
+      <div class="sidebar">
+        <h3>Subtitle lorem ipsum dolor sit amet...</h3>
+      </div>
+      <div class="extra-content">
+        <p>Extra content lorem ipsum dolor sit amet...</p>
+      </div>
+    </div>
+
+    <div class="card-section">
+      <div>
+        <h3>Card Subtitle</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+      </div>
+      <h3>Another subtitle</h3>
+    </div>
+
+    <div class="card-section">
+      <h2>Long Heading Section</h2>
+      <h3>Subheading with paragraph</h3>
+      <p>Full paragraph content with placeholder text...</p>
+    </div>
+
+    <div class="card-section">
+      <h2>Another Content Area</h2>
+      <p>More text here to simulate article or card section content...</p>
+    </div>
+  </div>
+</body>
+
+</html>
