@@ -6,96 +6,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
-  <title>Semantic Layout</title>
+  <title>Faelzinho Residence</title>
 
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f4efeb;
+      color: #484848;
     }
 
     .main-container {
       max-width: 1000px;
       margin: 0 auto;
-      padding-top: 0rem;
-      background-color: #f4efeb;
-      color: #484848;
-
     }
 
     .main {
-  position: relative;
-  text-align: center;
-  padding: 1rem 1rem 5rem 1rem;
-  background-image: url("https://blog-static.petlove.com.br/wp-content/uploads/2021/10/grama-para-gatos-Petlove.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin: 1rem auto;
-  max-width: 100%;
-
-  font-family: 'Jost', sans-serif;
-}
+      position: relative;
+      text-align: center;
+      padding: 1rem 1rem 5rem 1rem;
+      background-image: url("https://blog-static.petlove.com.br/wp-content/uploads/2021/10/grama-para-gatos-Petlove.jpg");
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin: 1rem auto;
+      border-radius: 16px;
+      font-family: 'Jost', sans-serif;
+      overflow: hidden;
+    }
 
     .main::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.2);
-      /* leve escurecimento para contraste */
-      border-radius: 16px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .main h2,
+    .main p {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
     }
 
     .main h2 {
-      position: relative;
       font-size: 4rem;
       font-weight: 400;
-      color: #ffffff;
       text-transform: uppercase;
       margin: 0;
       letter-spacing: 2px;
-      z-index: 1;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
     }
 
-      .main p {
-      position: relative;
+    .main p {
       font-size: 1.5rem;
       font-weight: 400;
-      color: #ffffff;
-      text-transform: capitalize;
       margin: 0;
       letter-spacing: 2px;
-      z-index: 1;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+      text-transform: capitalize;
     }
 
+    .btn-back {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      margin: 2rem;
+      background-color: #484848;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
 
+    .btn-back:hover {
+      background-color: #a3a1a1;
+      transform: translateY(-2px);
+    }
 
     .content-grid {
       display: flex;
-
-
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease;
     }
 
-    .img {
-      width: 100%;
-
+    .content-grid:hover {
+      transform: scale(1.01);
     }
 
     .sidebar {
-      font-size: 1.3rem;
-      padding: 2rem 0 2rem 2rem;
-      margin: 0;
+      width: 50%;
+      padding: 1rem;
+    }
+
+    .sidebar img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar img:hover {
+      transform: scale(1.03);
     }
 
     .main-content {
-      font-size: 1.3rem;
+      width: 50%;
       padding: 2rem;
-      margin: 0;
     }
 
     .main-content h2 {
@@ -112,51 +131,47 @@
       font-family: 'Source Sans 3', sans-serif;
       font-size: 1.1rem;
       font-weight: 300;
-      margin: 0.5rem 0 0 0;
+      margin-top: 0.5rem;
     }
 
-    .btn-back {
-      display: inline-block;
-      padding: 0.6rem 1.2rem;
-      margin: 1rem 1rem 1rem 2rem;
-      background-color: #484848;
-      color: #fff;
-      text-decoration: none;
+    footer {
+      text-align: center;
+      padding: 2rem;
       font-family: 'Jost', sans-serif;
-      font-weight: 600;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      font-size: 1rem;
+      color: #777;
+      border-top: 1px solid #ccc;
+      margin-top: 3rem;
     }
 
-    .btn-back:hover {
-      background-color: #a3a1a1;
-      transform: translateY(-2px);
+    footer a {
+      color: #484848;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      transition: color 0.2s ease;
     }
 
+    footer a:hover {
+      color: #000;
+    }
 
-    /* Responsivo para telas menores que 768px */
-    @media (max-width: 500px) {
+    @media (max-width: 768px) {
       .content-grid {
         flex-direction: column;
-        align-items: stretch;
-        /* para que itens ocupem toda largura */
-        gap: 1rem;
-        /* espaçamento entre sidebar e main-content */
       }
 
-      .sidebar {
-        padding: 1rem 0 0 0;
-      }
-
+      .sidebar,
       .main-content {
-        padding: 2rem;
+        width: 100%;
+        padding: 1rem;
       }
 
-      .img {
-        max-width: 100%;
-        height: auto;
-        display: block;
+      .main h2 {
+        font-size: 2.5rem;
+      }
+
+      .main p {
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -167,89 +182,78 @@
   <div class="main-container">
     <div class="main">
       <h2>faelzinho residence</h2>
-      <p>Venha morar onde os gatos e os cães luxam</p>
+      <p>Um lar onde o conforto encontra o ronronar dos gatos</p>
     </div>
-
 
     <a href="index.html" class="btn-back">Back to index</a>
-    <div class="content-grid">
-      <div class="sidebar">
-        <img class="img"
-          src="https://s2.glbimg.com/hCLHa6_qLoTD0kF2Jnqk0-phfzE=/smart/e.glbimg.com/og/ed/f/original/2014/10/07/apartamento_palazzo_lumini_04.jpg"
-          alt="Apartamento de luxo">
-      </div>
-      <div class="main-content">
-        <h2>luxo tem lugar</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maiores culpa eum quam quas explicabo
-          facilis doloremque assumenda, labore sapiente magnam? Porro quos velit hic iure tenetur?</p>
-      </div>
-    </div>
 
     <div class="content-grid">
       <div class="sidebar">
-        <img class="img"
-          src="https://q-xx.bstatic.com/xdata/images/hotel/608x352/582326247.webp?k=06671d9686a50cdf14e68b10ced59fe90a0acbb274797b7b8f6601d01633f260&o="
-          alt="Apartamento de luxo">
+        <img src="https://s2.glbimg.com/hCLHa6_qLoTD0kF2Jnqk0-phfzE=/smart/e.glbimg.com/og/ed/f/original/2014/10/07/apartamento_palazzo_lumini_04.jpg" alt="Apartamento de luxo">
       </div>
       <div class="main-content">
-        <h2>piscina</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maiores culpa eum quam quas explicabo
-          facilis doloremque assumenda, labore sapiente magnam? Porro quos velit hic iure tenetur?</p>
+        <h2>design e elegância</h2>
+        <p>Ambientes sofisticados com acabamentos de alto padrão para você e seus companheiros de quatro patas.</p>
       </div>
     </div>
-<div class="content-grid">
+
+    <div class="content-grid">
       <div class="sidebar">
-        <img class="img"
-          src=" https://blog-static.petlove.com.br/wp-content/uploads/2021/10/grama-para-gatos-Petlove.jpg"
-          alt="Apartamento de luxo">
+        <img src="https://q-xx.bstatic.com/xdata/images/hotel/608x352/582326247.webp?k=06671d9686a50cdf14e68b10ced59fe90a0acbb274797b7b8f6601d01633f260&o=" alt="Piscina de luxo">
       </div>
       <div class="main-content">
-        <h2>gatinho sapeca</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maiores culpa eum quam quas explicabo
-          facilis doloremque assumenda, labore sapiente magnam? Porro quos velit hic iure tenetur?</p>
+        <h2>refresque-se com estilo</h2>
+        <p>Piscina ampla, ideal para momentos de lazer com seu pet e relaxamento absoluto.</p>
       </div>
     </div>
-<div class="content-grid">
+
+    <div class="content-grid">
       <div class="sidebar">
-        <img class="img"
-          src=" https://blog-static.petlove.com.br/wp-content/uploads/2021/10/pastor-belga-preto-petlove.jpg"
-          alt="Apartamento de luxo">
+        <img src="https://blog-static.petlove.com.br/wp-content/uploads/2021/10/grama-para-gatos-Petlove.jpg" alt="Gato na grama">
       </div>
       <div class="main-content">
-        <h2>doguinho preto</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maiores culpa eum quam quas explicabo
-          facilis doloremque assumenda, labore sapiente magnam? Porro quos velit hic iure tenetur?</p>
+        <h2>aventuras verdes</h2>
+        <p>Um jardim projetado para os felinos explorarem com liberdade e segurança.</p>
       </div>
     </div>
 
-
-<div class="content-grid">
+    <div class="content-grid">
       <div class="sidebar">
-        <img class="img"
-          src=" https://blog-static.petlove.com.br/wp-content/uploads/2013/04/10152235/esporotricose-o-fungo-que-afeta-os-gatos-Petlove.jpg">
+        <img src="https://blog-static.petlove.com.br/wp-content/uploads/2021/10/pastor-belga-preto-petlove.jpg" alt="Pastor belga preto">
       </div>
       <div class="main-content">
-        <h2>gatinho rueiro</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maiores culpa eum quam quas explicabo
-          facilis doloremque assumenda, labore sapiente magnam? Porro quos velit hic iure tenetur?</p>
+        <h2>proteção e carinho</h2>
+        <p>Espaço dedicado aos cães com monitoramento, conforto térmico e interação constante.</p>
       </div>
     </div>
 
-
-<div class="content-grid">
+    <div class="content-grid">
       <div class="sidebar">
-        <img class="img"
-          src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNvWEhEemCvpKVVCoGZ3lvm4UeEHFc3ngJnvkgjYiCgiEgh8oeXErsplI&s=10
-"
-          alt="Apartamento de luxo">
+        <img src="https://blog-static.petlove.com.br/wp-content/uploads/2013/04/10152235/esporotricose-o-fungo-que-afeta-os-gatos-Petlove.jpg" alt="Gato observador">
       </div>
       <div class="main-content">
-        <h2>amigos do dia</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maiores culpa eum quam quas explicabo
-          facilis doloremque assumenda, labore sapiente magnam? Porro quos velit hic iure tenetur?</p>
+        <h2>curiosidade felina</h2>
+        <p>Janelas amplas e seguras para os gatinhos observarem o mundo em total tranquilidade.</p>
       </div>
     </div>
 
+    <div class="content-grid">
+      <div class="sidebar">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNvWEhEemCvpKVVCoGZ3lvm4UeEHFc3ngJnvkgjYiCgiEgh8oeXErsplI&s=10" alt="Cães amigos">
+      </div>
+      <div class="main-content">
+        <h2>amizades que duram</h2>
+        <p>Seu pet nunca estará sozinho — aqui é o lar da socialização e dos laços verdadeiros.</p>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 Faelzinho Residence. Todos os direitos reservados.<br>
+      Siga-nos:
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">TikTok</a>
+    </footer>
   </div>
 
 </body>
