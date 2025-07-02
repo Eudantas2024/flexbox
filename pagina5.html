@@ -3,18 +3,24 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
   <title>Faelzinho Residence</title>
 
   <style>
+    /* Garantir box-sizing para todos */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4efeb;
       color: #484848;
+      overflow-x: hidden;
     }
 
     .main-container {
@@ -32,7 +38,6 @@
       background-repeat: no-repeat;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       margin: 1rem auto;
-      
       font-family: 'Jost', sans-serif;
       overflow: hidden;
     }
@@ -53,8 +58,7 @@
     }
 
     .main h2 {
-     padding-top: 2rem;
-
+      padding-top: 2rem;
       font-size: 4rem;
       font-weight: 400;
       text-transform: uppercase;
@@ -91,6 +95,7 @@
 
     .content-grid {
       display: flex;
+      flex-wrap: wrap;
       margin-bottom: 2rem;
       transition: transform 0.3s ease;
     }
@@ -99,9 +104,10 @@
       transform: scale(1.01);
     }
 
-    .sidebar {
+    .sidebar,
+    .main-content {
       width: 50%;
-      padding: 3rem 0 0 1rem;
+      padding: 3rem 1rem 0 1rem;
     }
 
     .sidebar img {
@@ -112,11 +118,6 @@
 
     .sidebar img:hover {
       transform: scale(1.03);
-    }
-
-    .main-content {
-      width: 50%;
-      padding: 2rem;
     }
 
     .main-content h2 {
@@ -162,13 +163,12 @@
         flex-direction: column;
       }
 
-      .sidebar, .main,
-      .main-content {
+      .sidebar,
+      .main-content,
+      .main {
         width: 100%;
         padding: 1rem;
       }
-
-
 
       .main h2 {
         font-size: 2.5rem;
@@ -182,6 +182,9 @@
 </head>
 
 <body>
+  <!-- seu conteúdo continua igual abaixo -->
+
+     
  <div class="main-container">
     <div class="main">
       <h2>faelzinho residence</h2>
